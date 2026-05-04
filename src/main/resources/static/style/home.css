@@ -1,0 +1,142 @@
+@font-face {
+    font-family: montserrat;
+    src: url("/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: toxigenesis;
+    src: url("/fonts/toxigenesis bd.otf");
+}
+body {
+    background-color: #232525;
+    color: #00E4EC;
+    margin: 0;
+    overflow-x: hidden;
+}
+h1 {
+    font-family: toxigenesis;
+}
+h3, p {
+    font-family: montserrat;
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10pt;
+    align-items: center;
+    box-shadow: #00E4EC 0pt 10pt 10pt;
+    padding-left: 10pt;
+    padding-right: 10pt;
+    margin-bottom: 30pt;
+}
+button {
+    cursor: pointer;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10pt;
+    border-bottom: solid #00E4EC 4pt;
+    padding-bottom: 10pt;
+    padding-left: 10pt;
+}
+form button {
+    height: fit-content;
+    background-color: #00E4EC;
+    color: #232525;
+    font-family: montserrat;
+    padding: 10pt;
+    padding-left: 30pt;
+    padding-right: 30pt;
+    border: none;
+    border-radius: 10pt;
+}
+form button div {
+    width: 10pt;
+    height: 10pt;
+    border: solid #00E4EC 2pt;
+    border-top: solid #232525 2pt;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+@keyframes loading {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+form p {
+    margin: 0;
+}
+form div {
+    display: flex;
+    gap: 10pt;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#fileInput {
+    display: none;
+}
+#fileLabel {
+    font-family: montserrat;
+    padding: 10pt;
+    border: dashed #00E4EC 2pt;
+    border-radius: 10pt;
+    cursor: pointer;
+}
+#files {
+    margin-top: 10pt;
+    display: flex;
+    padding: 10pt;
+    flex-direction: column;
+    gap: 10pt;
+}
+#files button {
+    width: fit-content;
+    padding: 10pt;
+    padding-left: 30pt;
+    padding-right: 30pt;
+    border-radius: 10pt;
+    background-color: #00E4EC;
+    color: #232525;
+    font-family: montserrat;
+    border: none;
+}
+#allFiles {
+    display: flex;
+    gap: 10pt;
+    flex-wrap: wrap;
+}
+.file {
+    display: flex;
+    border: solid #00E4EC 1pt;
+    padding: 5pt;
+    gap: 10pt;
+    flex-direction: column;
+    max-width: 300pt;
+    min-width: 100pt;
+    align-items: center;
+}
+.file button {
+    background-color: #00E4EC;
+    padding-top: 5pt !important;
+    padding-bottom: 5pt !important;
+    color: #232525;
+    border: none;
+    margin-top: auto;
+    width: 100% !important;
+    border-radius: 0 !important;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        margin-bottom: 0;
+    }
+    .file {
+        max-width: 100%;
+        width: 100%;
+    }
+}
